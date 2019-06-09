@@ -8,9 +8,12 @@ namespace Epam_Task3
         {
             WorkWithString wws = new WorkWithString();
             LineReader line = new LineReader();
-            foreach (var i in wws.UniqueWords(line.ReadFromFile("input.txt")))
+            string input = line.ReadFromFile("input.txt");
+            Console.WriteLine($"Начальная строка:\n{input}\nРезультат:");
+
+            foreach (var i in wws.UniqueWords(input))
             {
-                Console.WriteLine(i);
+                Console.Write(i + " ");
             }
         }
     }
